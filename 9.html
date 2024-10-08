@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        h2 {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <h2>5단원</h2>
+    <p><fieldset>
+        <legend>form태그</legend>
+        <form>
+            <div>
+                <label for="password">password : </label>
+                <input type="password" name="password" id="password" placeholder="password">
+            </div>
+            <div>
+                <label for="radio">radio : </label>
+                <input type="radio" name="radio" id="radio" value="Y">유
+                <input type="radio" name="radio" id="radio" value="N">무
+                <input type="radio" name="radio" id="radio" value="">전체
+            </div>
+            <div>
+                <label for="range">range : </label>
+                <input type="range" name="range" id="range" min="0" max="10">
+            </div>
+            <div>
+                <label for="datetime">datetime : </label>
+                <input type="datetime-local" name="datetime" id="datetime">
+            </div>
+            <input type="submit" value="완료">
+            <input type="reset" value="취소">
+        </form>
+    </fieldset>
+    </p>
+
+    <h2>6단원</h2>
+    <p>선택자 우선순위
+        <style>
+            #span {
+                color: dodgerblue;
+            }
+            .span {
+                color: cadetblue !important;
+            }
+            span {
+                color: brown;
+            }
+        </style>
+        <div>
+            <span>기본 span</span><br>
+            <span class="span" id="span">class important, id span</span><br>
+            <span id="span" style="color: mediumslateblue;">id, inline span</span>
+        </div>
+    </p>
+
+    <h2>7단원</h2>
+    <p>font와 표
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+            h3 {
+                font-weight: 600;
+                font-family: "Nanum Pen Script", cursive;
+                border: 1px solid red;
+                width: 400px;
+                text-align: center;
+                line-height: 50px;
+            }
+            table {
+                border: 1px solid gray;
+                caption-side: bottom;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid gray;
+                padding: 5px
+            }
+        </style>
+        <div>
+            <h3>Web Font - Nanum Pen Script</h3>
+        </div>
+        <table>
+            <caption>caption : border collapse</caption>
+            <tr>
+                <th>이름</th><th>아이디</th><th>닉네임</th><th>지역</th>
+            </tr>
+            <tr>
+                <td>홍길동</td><td>hong</td><td>iiii</td><td rowspan="2">부산</td>
+            </tr>
+            <tr>
+                <td>테스트</td><td>test</td><td>jjjj</td>
+            </tr>
+        </table>
+    </p>
+
+    <h2>8단원</h2>
+    <p>box, position
+        <style>
+            .div, .span2 {
+                border: 1px solid gray;
+            }
+            .span2 {
+                margin-right: 10px;
+                box-sizing: border-box;
+                box-shadow: 5px 5px 10px 3px brown;
+            }
+        </style>
+        <div class="div">박스 모델 구성 : 콘텐츠 영역, padding, 테두리, margin</div>
+        <div style="padding: 10px;">
+            <span class="span2">box sizing - border-box/content-box</span>
+            <span class="span2">box shadow - 수평 수직 흐림 번짐 색상 inset(안쪽으로)</span>
+        </div>
+        <img src="emile-perron-xrVDYZRGdw4-unsplash.jpg" width="200px">
+        <div style="color: white; position: relative; top: -30px; right: -120px;">RELATIVE</div>
+        <div style="position: absolute; top: 850px; left: 300px;">ABSOLUTE</div>
+    </p>
+
+    <h2>9단원</h2>
+    <p>배경
+        <div style="border: 3px dotted darkgray; background-color: rgb(240, 191, 101); background-clip: border-box;">
+            background-clip
+        </div>
+        <br>
+        <style>
+            body {
+                width: 500px;
+                background-image: url(artem-sapegin-ZMraoOybTLQ-unsplash.jpg);
+                background-size: 40%;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-attachment: fixed;
+            }
+        </style>
+    </p>
+</body>
+</html>
