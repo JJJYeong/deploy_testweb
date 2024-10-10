@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        h2 {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <h2>13단원</h2>
+    <p>입출력<br>
+        <script>
+            document.write('Hello World! document.write()');
+            console.log('this is console.log()')
+
+            function showAlert(e) {
+                alert('open alert success');
+            }
+            function showConfirm(e) {
+                if(confirm('확인하시겠습니까?')) {
+                    alert('확인');
+                } else {
+                    alert('취소');
+                }
+            }
+            function showPrompt(e) {
+                const nameDiv = document.getElementById('nameDiv');
+                nameDiv.innerText = '이름 : ' + prompt('이름을 적어주세요.', '');
+            }
+        </script>
+        <br>
+        <button onclick="showAlert()">alert</button>
+        <button onclick="showConfirm()">confirm</button>
+        <button onclick="showPrompt()">prompt</button>
+        <div id="nameDiv"></div>
+    </p>
+</body>

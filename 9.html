@@ -20,7 +20,7 @@
         <form>
             <div>
                 <label for="password">password : </label>
-                <input type="password" name="password" id="password" placeholder="password">
+                <input type="password" name="password" id="password" placeholder="password" autofocus>
             </div>
             <div>
                 <label for="radio">radio : </label>
@@ -129,7 +129,6 @@
         <div style="border: 3px dotted darkgray; background-color: rgb(240, 191, 101); background-clip: border-box;">
             background-clip
         </div>
-        <br>
         <style>
             body {
                 background-image: url(artem-sapegin-ZMraoOybTLQ-unsplash.jpg);
@@ -139,6 +138,164 @@
                 background-attachment: fixed;
             }
         </style>
+    </p>
+
+    <h2>10단원</h2>
+    <p>고급 선택자
+        <style>
+            div > p {
+                color: red;
+            }
+            div ~ p[class ~= "button"] {
+                background-color: khaki;
+            }
+            p[title ^= "la"] {
+                color: blueviolet;
+            }
+            p[title $= "st"] {
+                background-color: beige;
+            }
+
+            div a:link, div a:visited {
+                text-decoration: none;
+                color: blue;
+            }
+            div a:hover, div a:focus {
+                background-color: aqua;
+            }
+
+            #form10 input:not([type="email"]) {
+                border: 1px solid red;
+            }
+            #form10::before {
+                content: "!입력폼!";
+                color: white;
+                background-color: darkblue;
+            }
+            #form10 {
+                margin: 5px;
+            }
+        </style>
+        <div>
+            <p>div 아래 p1</p>
+            <p class="button">div 아래 p2</p>
+        </div>
+        <p title="first">div 밖 p1</p>
+        <p class="button">div 밖 p2</p>
+        <p title="last">div 밖 p3</p>
+        <br>
+        <div><a href="#">링크</a>&nbsp;&nbsp;<a href="#">링크</a></div>
+        <div id="form10">
+            name : <input type="text">
+            password : <input type="password">
+            email : <input type="email">
+        </div>
+    </p>
+
+    <h2>11단원</h2>
+    <p>transition, animation
+        <style>
+            .trans1, .trans2 {
+                margin: 10px 30px;
+                width: 200px;
+                height: 150px;
+                border: 1px solid black;
+                background-color: pink;
+                transition: 2s ease-out 1s;
+            }
+            .trans1:hover {
+                transform: rotate3d(2, 1, -2, 60deg);
+            }
+            .trans2:hover {
+                transform: scale(1.5);
+            }
+            .ani {
+                margin: 50px;
+                width: 200px;
+                height: 150px;
+                background-color: greenyellow;
+                animation-name: shape;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: 6;
+            }
+            @keyframes shape {
+                from { border: 1px solid black; }
+                to {
+                    border: 1px solid transparent;
+                    border-radius: 30%;
+                }
+            }
+        </style>
+        <div style="display: flex;">
+            <div class="trans1"></div>
+            <div class="trans2"></div>
+        </div>
+        <div class="ani"></div>
+    </p>
+
+    <h2>12단원</h2>
+    <p>반응형 웹과 레이아웃
+        <style>
+            .media {
+                width: 400px;
+                height: 200px;
+                background-color: bisque;
+            }
+            @media screen and (max-width: 1200px) {
+                .media {
+                    background-color: skyblue;
+                }
+            }
+            @media screen and (max-width: 1000px) {
+                .media {
+                    background-color: yellow;
+                }
+            }
+            @media screen and (max-width: 800px) {
+                .media {
+                    background-color: coral;
+                }
+            }
+
+            .rayout1 {
+                display: flex;
+                align-items: flex-start;
+                margin-left: 5px;
+            }
+            .rayout2 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-rows: minmax(50px, auto);
+            }
+            .rayout2 > div {
+                border: 1px solid black;
+                background-color: rgb(228, 228, 228);
+                margin: 5px;
+            }
+        </style>
+        <div class="media"></div>
+        <br>
+        <div class="rayout1">
+            <img src="christopher-gower-m_HRfLhgABo-unsplash.jpg" style="width: 150px; height: 100px;">
+            <div>
+                <h4>플렉스 박스 레이아웃</h4>
+                <p style="color: gray;">The Spring Framework is an application framework and inversion of control
+                    container for the Java platform.[2] The framework's core features can be used
+                    by any Java application, but there are extensions for building web applications
+                    on top of the Java EE (Enterprise Edition) platform.</p>
+            </div>
+        </div>
+        <br>
+        <h4>CSS 그리드 레이아웃</h4>
+        <div class="rayout2">
+            <div>The Spring Framework is an application framework and inversion of control container for the Java platform.</div>
+            <div>Java[a] is one of the Greater Sunda Islands in Indonesia. It is bordered by the Indian Ocean to the south and the Java Sea to the north.</div>
+            <div>JavaScript (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.</div>
+            <div><img src="luca-bravo-XJXWbfSo2f0-unsplash.jpg" style="display: block; width: 100%;"></div>
+            <div>Language(HTML) is the standard markup language for creating web pages and web applications.</div>
+        </div>
+        <br>
     </p>
 </body>
 </html>

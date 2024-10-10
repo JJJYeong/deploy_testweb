@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>WEB1 - WEB </title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="style.css" />
+   <style>
+      .list {
+         width: 300px;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+         grid-template-rows: minmax(100px, auto);
+      }
+      .list > div {
+         width: auto;
+         margin: 10px;
+         padding: 5px;
+         display: flex;
+         align-items: end;
+         border: 1px solid gray;
+         background-color: azure;
+      }
+      .list a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+</head>
+
+<body>
+   <h1><a href="index.html">WEB</a></h1>
+
+   <div class="list">
+      <div><a href="9.html">HTML/CSS</a></div>
+      <div><a href="10.html">JavaScript</a></div>
+   </div>
+</body>
+
+</html>
