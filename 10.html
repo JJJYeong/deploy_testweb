@@ -41,4 +41,53 @@
         <button onclick="showPrompt()">prompt</button>
         <div id="nameDiv"></div>
     </p>
+
+    <h2>14단원</h2>
+    <p>조건문, 반복문<br>
+        <script>
+            let age = 2024;
+
+            age++;
+            age -= 1999;
+            document.write('2024년 기준 나이 : ' + age);
+            document.write('<br><br>');
+
+            document.write('3 == "3" : ' + (3 == "3"));
+            document.write('<br>');
+            document.write('3 === "3" : ' + (3 === "3"));
+            document.write('<br>');
+            alert(confirm('삼항연산자 : 3은 2의 배수입니까?') ? '오답!' : '정답!'); 
+
+            for(var i=1; i<=3; i++) {
+                if(i === 2) {
+                    document.write('<br>continue');
+                    continue;
+                }
+                document.write('<br>for문 ' + i + '번째');
+            }
+        </script>
+    </p>
+
+    <h2>15단원</h2>
+    <p>함수와 이벤트<br>
+        <button onclick="alertMsg1('기본함수')">?함수</button>
+        <button onclick="alertMsg2('익명함수')">?함수</button>
+        <div>
+            var : 호이스팅 문제 발생 주의
+        </div>
+        <span id="eventDiv" style="background-color: cyan;">double click</span>
+
+        <script>
+            function alertMsg1(msg) {
+                alert(msg);
+            }
+            const alertMsg2 = (msg) => {
+                alert(msg);
+            }
+            const eventDiv = document.getElementById('eventDiv');
+            eventDiv.ondblclick = () => {
+                alert('이벤트 발생!');
+            }
+        </script>
+    </p>
 </body>

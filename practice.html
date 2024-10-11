@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css" />
 	<style>
         #buttons {
-            width: 500px;
+            width: 700px;
             margin: 20px auto;
             display: flex;
             justify-content: space-between;
         }
         button {
-            width: 150px;
+            width: 110px;
             height: 40px;
             border: 1px solid lightgray;
             background-color: white;
@@ -22,8 +22,8 @@
             background-color: darkgray;
         }
         #result {
-            width: 500px;
-            height: 550px;
+            width: 700px;
+            height: 750px;
             margin: 30px auto;
             border: 2px solid lightgray;
         }
@@ -36,9 +36,12 @@
     <h1><a href="index.html">WEB</a></h1>
     
     <div id="buttons">
-        <button onclick="showInfo('pie')">파이</button>
-        <button onclick="showInfo('tea')">버블티</button>
-        <button onclick="showInfo('cake')">케이크</button>
+        <button onclick="showInfo('steak')">매드포갈릭</button>
+        <button onclick="showInfo('shabu')">쫜쫜훠궈</button>
+        <button onclick="showInfo('noodle')">칸다소바</button>
+        <button onclick="showInfo('tea')">공차</button>
+        <button onclick="showInfo('pie')">해피파이갤러리</button>
+        <button onclick="showInfo('cake')">투썸플레이스</button>
     </div>
 	<div id="result"></div>
 
@@ -46,13 +49,27 @@
         const result = document.getElementById('result');
 
 		function showInfo(menu) {
-			if(menu === 'pie') {
-                result.innerHTML = '<img src="image/happy_pie_gallery.png">메뉴 : 피스타치오 크림파이<br>가격 : 7,500원';
-            } else if(menu === 'tea') {
-                result.innerHTML = '<img src="image/gongcha.png">메뉴 : 뵈르뵈르 피넛 버터 초코 스무디<br>가격 : 5,700원';
-            } else {
-                result.innerHTML = '<img src="image/twosome_place.png">메뉴 : 스트로베리 초콜릿 생크림 케이크<br>가격 : 30,000원';
+            let menuHtml = '';
+            switch(menu) {
+                case 'steak' :
+                    menuHtml = '<img src="">메뉴 : 갈릭 스테이크<br>가격 : 48,500원';
+                    break;
+                case 'shabu' :
+                    menuHtml = '<img src="">메뉴 : Small 세트<br>가격 : 13,900원';
+                    break;
+                case 'noodle' :
+                    menuHtml = '<img src="">메뉴 : 마제소바<br>가격 : 11,000원';
+                    break;
+                case 'tea' :
+                    menuHtml = '<img src="image/gongcha.png">메뉴 : 뵈르뵈르 피넛 버터 초코 스무디<br>가격 : 5,700원';
+                    break;
+                case 'pie' :
+                    menuHtml = '<img src="image/happy_pie_gallery.png">메뉴 : 피스타치오 크림파이<br>가격 : 7,500원';
+                    break;
+                default :
+                    menuHtml = '<img src="image/twosome_place.png">메뉴 : 스트로베리 초콜릿 생크림 케이크<br>가격 : 30,000원';
             }
+            result.innerHTML = menuHtml;
 		}
 	</script>
 </body>
