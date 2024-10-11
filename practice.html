@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="style.css" />
+	<style>
+        #buttons {
+            width: 500px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            border: 1px solid lightgray;
+            background-color: white;
+        }
+        button:hover, button:focus {
+            background-color: darkgray;
+        }
+        #result {
+            width: 500px;
+            height: 550px;
+            margin: 30px auto;
+            border: 2px solid lightgray;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    
+    <div id="buttons">
+        <button onclick="showInfo('pie')">파이</button>
+        <button onclick="showInfo('tea')">버블티</button>
+        <button onclick="showInfo('cake')">케이크</button>
+    </div>
+	<div id="result"></div>
+
+    <script>
+        const result = document.getElementById('result');
+
+		function showInfo(menu) {
+			if(menu === 'pie') {
+                result.innerHTML = '<img src="image/happy_pie_gallery.png">메뉴 : 피스타치오 크림파이<br>가격 : 7,500원';
+            } else if(menu === 'tea') {
+                result.innerHTML = '<img src="image/gongcha.png">메뉴 : 뵈르뵈르 피넛 버터 초코 스무디<br>가격 : 5,700원';
+            } else {
+                result.innerHTML = '<img src="image/twosome_place.png">메뉴 : 스트로베리 초콜릿 생크림 케이크<br>가격 : 30,000원';
+            }
+		}
+	</script>
+</body>
+</html>  

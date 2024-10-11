@@ -7,12 +7,17 @@ h1 {
     border-bottom: 1px solid gray;
     padding: 20px;
 }
+a:not([title="HTML5 specification"], .active, h1) {
+    text-decoration: none;
+    color: #0288d1;
+}
 ol {
     border-right: 1px solid gray;
     width: 100px;
     padding: 10px 25px;
 }
 .active {
+    text-decoration: none;
     color: red;
 }
 #grid {

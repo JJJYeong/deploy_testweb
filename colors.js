@@ -9,8 +9,7 @@ function nightDayHandler(self) {
         var i = 0;
         while ( i < alist.length) {
             if(alist[i].className !== 'active') {
-                alist[i].style.color = 'powderblue';
-                console.log(alist[i]);
+                alist[i].style.color = '#81d4fa';
             }
             i = i + 1 ;
         }
@@ -20,9 +19,12 @@ function nightDayHandler(self) {
         self.value = 'night';
         var i = 0;
         while ( i < alist.length) {
-            if(alist[i].className !== 'active') {
-                alist[i].style.color = 'blue';
-                console.log(alist[i]);
+            if(alist[i].title === 'HTML5 specification') {
+                alist[i].style.color = '';
+            } else if(alist[i].className !== 'active') {
+                alist[i].style.color = '#0288d1';
+            } else {
+                alist[i].style.color = 'red';
             }
             i = i + 1 ;
         }
