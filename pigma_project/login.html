@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="landing.js"></script>
+</head>
+<body>
+    <header>
+        <a href="landing.html">
+            <img src="open-book_5597119.png" alt="logo" class="logo">
+            My Blog
+        </a>
+        <span class="buttons">
+            <button class="login">Log in</button>
+            <button class="signup">Sign up</button>
+        </span>
+        <span class="userInfo">
+            Hello,&nbsp;<span id="username">testtesttest</span>&nbsp;!
+            <button class="logout">Log out</button>
+        </span>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Log in</h1>
+            <form class="form-box" id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Log in</button>
+                <a href="signup.html">Not a member yet?</a>
+            </form>
+        </div>
+    </main>
+
+    <button class="changeColor" value="light">Dark</button>
+</body>
+</html>

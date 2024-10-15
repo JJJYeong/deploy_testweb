@@ -10,20 +10,48 @@
 </head>
 <body>
     <header>
-        <img src="open-book_5597119.png">
-        My Blog
+        <a href="landing.html">
+            <img src="open-book_5597119.png" alt="logo" class="logo">
+            My Blog
+        </a>
         <span class="buttons">
             <button class="login">Log in</button>
             <button class="signup">Sign up</button>
         </span>
         <span class="userInfo">
-            Hello, <span id="username">test</span>!
+            Hello,&nbsp;<span id="username">testtesttest</span>&nbsp;!
             <button class="logout">Log out</button>
         </span>
     </header>
-    <main>
-        asdfasdf
-        <!-- https://www.figma.com/design/9bL53kZnIN2GRjl30y4Oxy/Untitled?node-id=0-1&t=HgHOjvJUTQROs9v1-1 -->
-    </main>
+
+    <!-- https://www.figma.com/design/9bL53kZnIN2GRjl30y4Oxy/Untitled?node-id=0-1&t=HgHOjvJUTQROs9v1-1 -->
+    <div id="mainImgs">
+        <div class="carousel-container">
+            <div class="carousel-item active">
+                <img src="../image/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../image/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../image/farzad-p-xSl33Wxyc-unsplash.jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../image/artem-sapegin-ZMraoOybTLQ-unsplash.jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../image/luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="...">
+            </div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </div>
+
+    <section>
+        <h1>Page List</h1>
+            <div id="cardContainer" class="card-container"></div>
+    </section>
+
+    <button class="changeColor" value="light">Dark</button>
 </body>
 </html>
