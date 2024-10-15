@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="style.css" />
+	<style>
+        #buttons {
+            width: 700px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 110px;
+            height: 40px;
+            border: 1px solid lightgray;
+            background-color: white;
+        }
+        button:hover, button:focus {
+            background-color: darkgray;
+        }
+        #result {
+            width: 700px;
+            height: 750px;
+            margin: 30px auto;
+            border: 2px solid lightgray;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    
+    <div id="buttons">
+        <button onclick="showInfo('steak')">매드포갈릭</button>
+        <button onclick="showInfo('asian')">페이페이</button>
+        <button onclick="showInfo('noodle')">칸다소바</button>
+        <button onclick="showInfo('tea')">공차</button>
+        <button onclick="showInfo('pie')">해피파이갤러리</button>
+        <button onclick="showInfo('cake')">투썸플레이스</button>
+    </div>
+	<div id="result"></div>
+
+    <script>
+        const result = document.getElementById('result');
+
+		function showInfo(menu) {
+            let menuHtml = '';
+            switch(menu) {
+                case 'steak' :
+                    menuHtml = '<img src="image/mad_for_garlic.png">메뉴 : 갈릭 스테이크<br>가격 : 48,500원';
+                    break;
+                case 'asian' :
+                    menuHtml = '<img src="image/peipei.png">메뉴 : Happy 1인 세트 (나시고랭, 미니 쌀국수)<br>가격 : 11,500원';
+                    break;
+                case 'noodle' :
+                    menuHtml = '<img src="image/kandasoba.jpg">메뉴 : 마제소바<br>가격 : 11,000원';
+                    break;
+                case 'tea' :
+                    menuHtml = '<img src="image/gongcha.png">메뉴 : 뵈르뵈르 피넛 버터 초코 스무디<br>가격 : 5,700원';
+                    break;
+                case 'pie' :
+                    menuHtml = '<img src="image/happy_pie_gallery.png">메뉴 : 피스타치오 크림파이<br>가격 : 7,500원';
+                    break;
+                default :
+                    menuHtml = '<img src="image/twosome_place.png">메뉴 : 스트로베리 초콜릿 생크림 케이크<br>가격 : 30,000원';
+            }
+            result.innerHTML = menuHtml;
+		}
+	</script>
+</body>
+</html>  
