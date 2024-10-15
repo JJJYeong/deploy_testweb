@@ -1,0 +1,33 @@
+/* header */
+header {
+    background-color: #F2DBFF;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: flex;
+}
+header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.buttons, .userInfo {
+    width: 86%;
+    text-align: end;
+}
+.userInfo {
+    font-size: 0.7em;
+    font-weight: normal;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.logout {
+    margin: 5px;
+}
+
+/* main */
+body {
+    background-color: #FAF2FF;
+}
