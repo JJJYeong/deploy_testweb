@@ -90,4 +90,47 @@
             }
         </script>
     </p>
+
+    <h2>16단원</h2>
+    <p>객체<br>
+        <script>
+            var nums = [2,3,4];
+            document.write("배열 nums : " + nums);
+            document.write('<br>');
+            document.write("nums length : " + nums.length);
+            document.write('<br>');
+            document.write('nums.join("/") : ' + nums.join('/'));
+            document.write('<br>');
+            document.write('nums.push(5,6) : ' + nums.push(5,6));
+            document.write('<br>');
+            document.write('nums.shift() : ' + nums.shift());
+            document.write('<br>');
+            document.write('nums.slice(1,3) : ' + nums.slice(1,3));
+            document.write('<br>');
+            document.write('new Date() : ' + new Date());
+            document.write('<br>');
+            var randomNum = Math.random() * 1000;
+            document.write('랜덤숫자 randomNum : ' + randomNum);
+            document.write('<br>');
+            document.write('Math.floor(randomNum) : ' + Math.floor(randomNum));
+            document.write('<br>');
+            document.write('Math.round(randomNum) : ' + Math.round(randomNum));
+            document.write('<br>');
+            document.write('history.length : ' + history.length);
+            window.open('https://naver.com', '_blank', 'width=800, height=400')
+                .moveBy(1000,200);
+        </script>
+    </p>
+
+    <h2>17단원</h2>
+    <p>DOM과 노드<br>
+        DOM트리 최상위 <b>html</b>(element)의 자식 노드 <b>head</b>(element), <b>body</b>(element), <b>lang="ko"</b>(attribute) ...
+        <br>
+        요소 접근 방법 : getElementById('id명'), innerText, getAttribute('속성명'), setAttribute('속성명', 값) 등
+        <br>
+        이벤트 접근 방법 : addEventListner('이벤트명', 함수, 캡처여부(default: false));
+        <br>
+        노드 추가/삭제 : createElement('태그'), createAttribute('속성명', 값), 부모.appendChild(자식), 부모.removeChile(자식)
+        <br><br>
+    </p>
 </body>
