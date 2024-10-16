@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Blog</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="landing.js"></script>
+    <script src="login.js"></script>
 </head>
 <body>
     <header>
@@ -14,19 +15,27 @@
             <img src="open-book_5597119.png" alt="logo" class="logo">
             My Blog
         </a>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="detail.html">HTML/CSS</a></li>
+                <li><a href="detail.html">JavaScript</a></li>
+                <li><a href="detail.html">Java/Spring</a></li>
+                <li><a href="detail.html">Database</a></li>
+            </ul>
+        </nav>
         <span class="buttons">
             <button class="login">Log in</button>
             <button class="signup">Sign up</button>
         </span>
         <span class="userInfo">
-            Hello,&nbsp;<span id="username">testtesttest</span>&nbsp;!
+            Hello,&nbsp;<span id="username"></span>&nbsp;!
             <button class="logout">Log out</button>
         </span>
     </header>
 
     <main>
         <div class="login-container">
-            <h1>Log in</h1>
+            <h2>Log in</h2>
             <form class="form-box" id="loginForm">
                 <div class="input-group">
                     <label for="email">Email</label>
@@ -43,5 +52,7 @@
     </main>
 
     <button class="changeColor" value="light">Dark</button>
+
+    <footer>@All Rights Reserved.</footer>
 </body>
 </html>

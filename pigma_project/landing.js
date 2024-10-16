@@ -1,20 +1,30 @@
 $().ready(function() {
-    console.log("loaded");
-    $('.userInfo').hide();
+    console.log("document loaded.");
+
+    if(sessionStorage.getItem('login') === 'y') {
+        $('#username').text(sessionStorage.getItem('username'));
+        $('.buttons').hide();
+        $('.userInfo').show();
+    } else {
+        $('.buttons').show();
+        $('.userInfo').hide();
+    }
 
     $('.login').click(function() {
         location.href = 'login.html';
     });
     $('.signup').click(function() {
-        // $('.buttons').hide();
-        // $('.userInfo').show();
         location.href = 'signup.html';
     });
 
+    // 로그아웃
     $('.logout').click(function() {
-        $('.buttons').show();
-        $('.userInfo').hide();
-        // location.href = 'landing.html';
+        if(confirm('로그아웃하시겠습니까?')) {
+            sessionStorage.removeItem('login');
+
+            alert('로그아웃되었습니다!');
+            location.href = 'landing.html';
+        }
     });
 
     // carousel
@@ -37,16 +47,12 @@ $().ready(function() {
     const cardData = [
         { title: "HTML/CSS", text: "HTML is the standard markup language for creating web pages and web applications. CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML." },
         { title: "JavaScript", text: "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS." },
-        { title: "jQuery", text: "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers." },
-        { title: "React/Node.js", text: "React lets you build user interfaces out of individual pieces called components." },
         { title: "Java/Spring", text: "Java is the most popular programming language. The Spring Framework is an application framework and inversion of control container for the Java platform." },
         { title: "Database", text: "Database is an organized collection of data or a type of data store based on the use of a database management system (DBMS), the software that interacts with end users, applications, and the database itself to capture and analyze the data." },
-        { title: "Server", text: "Server, a computer program or a device that provides requested information for other programs or devices, called clients." }
     ];
 
     cardData.forEach(data => {
         const truncatedText = data.text.length > 250 ? data.text.substring(0, 250) + '...' : data.text;
-
         const card = `
             <div class="card">
                 <a href="detail.html">
@@ -61,7 +67,7 @@ $().ready(function() {
     // mode change
     $('.changeColor').click(function() {
         if(this.value === 'light') {
-            $('*').not('.prev, .next').css('color', '#F2DBFF');
+            $('*').not('.prev, .next, footer, .login-container *').css('color', '#F2DBFF');
             $('body').css('background-color', 'rebeccapurple');
             $('header').css('background-color', 'indigo');
             $('.changeColor').css('background-color', '#FAF2FF');
@@ -69,11 +75,11 @@ $().ready(function() {
             $('.changeColor').text('Light');
             this.value = 'dark';
         } else {
-            $('*').not('.prev, .next').css('color', 'black');
+            $('*').not('.prev, .next, footer, .login-container *').css('color', 'black');
             $('body').css('background-color', '#FAF2FF');
             $('header').css('background-color', '#F2DBFF');
             $('.changeColor').css('background-color', 'rebeccapurple');
-            $('.changeColor').css('color', '#F2DBFF');
+            $('.changeColor').css('color', '#ffffff');
             $('.changeColor').text('Dark');
             this.value = 'light';
         }

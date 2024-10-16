@@ -8,6 +8,15 @@ a, a:visited {
     text-decoration: none;
 }
 
+button {
+    margin: 5px;
+    padding: 2px 5px;
+    background-color: #FAF2FF;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* header */
 header {
     background-color: #F2DBFF;
@@ -16,10 +25,11 @@ header {
     font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header > a {
-    width: 17%;
+    width: 20%;
     display: flex;
     align-items: center;
 }
@@ -30,17 +40,23 @@ header > a {
     margin-right: 10px;
 }
 
-button {
-    margin: 5px;
-    padding: 2px 5px;
-    background-color: #FAF2FF;
-    border: 1px solid gray;
-    border-radius: 5px;
-    cursor: pointer;
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 0.64em;
 }
 
 .buttons, .userInfo {
-    width: 86%;
+    width: 25%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -53,6 +69,30 @@ button {
 
 .logout {
     margin: 5px;
+}
+
+/* footer */
+footer {
+    height: 80px;
+    background-color: #333;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* changeColor button */
+.changeColor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rebeccapurple;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* main img */
@@ -99,14 +139,16 @@ button {
     right: 10px;
 }
 
-/* card */
+/* page list */
 section {
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -114,7 +156,8 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    width: 20%;
+    width: 21%;
+    min-width: 160px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
@@ -136,48 +179,39 @@ section {
     line-height: 1.3em;
 }
 
-/* changeColor button */
-.changeColor {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: rebeccapurple;
-    color: #FAF2FF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* login */
+/* login, signup */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px); /* 헤더 높이에 따라 조정 */
+    height: calc(100vh - 80px);
 }
+
 .login-container {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
-    margin: 20px auto; /* 중앙 정렬 */
+    margin: 20px auto;
 }
-.login-container h1 {
+
+.login-container h2 {
     text-align: center;
     font-size: xxx-large;
     color: #333;
 }
+
 .login-container .input-group {
     margin-bottom: 15px;
 }
+
 .login-container label {
     display: block;
     margin-bottom: 5px;
     color: #666;
 }
+
 .login-container input {
     width: 100%;
     padding: 10px;
@@ -185,13 +219,15 @@ main {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 .login-container input:focus {
     border-color: #7a7a7a;
     outline: none;
 }
+
 .login-container .btn {
     background-color: black;
-    color: white;
+    color: #ffffff;
     padding: 10px;
     margin: 0;
     border: none;
@@ -200,12 +236,22 @@ main {
     width: 100%;
     font-size: 16px;
 }
+
 .login-container a {
     display: block;
     margin-top: 15px;
     color: black;
     text-decoration: none;
 }
+
 .login-container a:hover {
     text-decoration: underline;
+}
+
+/* detail */
+.dtl-container {
+    height: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
